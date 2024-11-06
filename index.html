@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Index</title>
+</head>
+<body class="bg-gray-900 text-white font-serif">
+
+    <!-- Encabezado con Logotipo y Navegación -->
+    <header class="bg-green-900 text-white">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="ruta-del-logo.png" alt="Logotipo" class="w-12 h-12">
+                <h1 class="text-3xl font-bold text-gold-500">El Anillo Único</h1>
+            </div>
+            <nav class="space-x-6 text-lg font-semibold">
+                <a href="#" class="hover:text-gold-500">Inicio</a>
+                <a href="#" class="hover:text-gold-500">Categorías</a>
+                <a href="#" class="hover:text-gold-500">Quiénes somos</a>
+                <a href="#" class="hover:text-gold-500">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Imagen Destacada con Título y Descripción -->
+    <section class="relative">
+        <div class="bg-cover bg-center h-96" style="background-image: url('ruta-imagen-destacada.jpg');"></div>
+        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+            <div class="text-center p-10 rounded-lg">
+                <h2 class="text-5xl font-bold text-gold-500">Explora la Tierra Media</h2>
+                <p class="text-lg text-white mt-4 max-w-2xl">Descubre la historia, los personajes y la magia detrás de la obra de J.R.R. Tolkien. Sumérgete en las historias que dan vida a la Tierra Media.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de Búsqueda -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="flex justify-center">
+            <input type="text" placeholder="Buscar en la Tierra Media..." class="w-full md:w-1/2 px-4 py-2 border border-gold-500 rounded-lg bg-gray-800 text-gold-500 placeholder-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-500">
+        </div>
+    </section>
+
+    <!-- Lista de Artículos Recientes -->
+    <section class="container mx-auto px-4 py-8">
+        <h3 class="text-3xl font-bold mb-6 text-gold-500">Últimos Artículos</h3>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            
+            <!-- Artículo 1 -->
+            <article class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="ruta-imagen-articulo1.jpg" alt="Imagen del artículo" class="w-full h-52 object-cover">
+                <div class="p-5">
+                    <h4 class="text-2xl font-bold text-gold-500">Los Elfos de Lothlórien</h4>
+                    <p class="text-gray-400 text-sm mt-2">Publicado el 10 de Octubre, 2024 por <span class="font-semibold text-gold-500">Galadriel</span></p>
+                    <p class="text-white mt-4">Sumérgete en los secretos de Lothlórien, hogar de los Elfos del bosque y de la mítica Galadriel, la Dama del Bosque...</p>
+                    <a href="#" class="text-gold-500 hover:underline mt-4 inline-block">Leer más</a>
+                </div>
+            </article>
+
+            <!-- Duplica este bloque de artículo para más artículos -->
+            
+        </div>
+    </section>
+
+    <!-- Sección de Categorías y Etiquetas -->
+    <aside class="container mx-auto px-4 py-8">
+        <h4 class="text-2xl font-bold mb-4 text-gold-500">Categorías</h4>
+        <div class="flex flex-wrap gap-3">
+            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Elfos</a>
+            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Hobbits</a>
+            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Historias</a>
+            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Anillos de Poder</a>
+            <!-- Añade más categorías según sea necesario -->
+        </div>
+    </aside>
+
+    <!-- Pie de Página con Información de Contacto y Redes Sociales -->
+    <footer class="bg-green-900 text-white mt-8 py-6">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left">
+                <p class="text-lg font-bold">El Anillo Único - Blog de la Tierra Media</p>
+                <p class="text-sm mt-2">Contacto: <a href="mailto:contacto@elanillounico.com" class="text-gold-500">contacto@elanillounico.com</a></p>
+            </div>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gold-500">Facebook</a>
+                <a href="#" class="hover:text-gold-500">Twitter</a>
+                <a href="#" class="hover:text-gold-500">Instagram</a>
+            </div>
+            <p class="text-sm mt-4 md:mt-0">© 2024 El Anillo Único. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
