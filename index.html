@@ -1,95 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Index</title>
 </head>
-<body class="bg-gray-900 text-white font-serif">
 
-    <!-- Encabezado con Logotipo y Navegación -->
-    <header class="bg-green-900 text-white">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="ruta-del-logo.png" alt="Logotipo" class="w-12 h-12">
-                <h1 class="text-3xl font-bold text-gold-500">El Anillo Único</h1>
+<body class="bg-gray-400 text-black">
+
+    <!-- Header -->
+    <header class="bg-green-800 text-white py-6 px-4 w-full">
+        <div class="flex items-center justify-between w-full space-x-4">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <img src="/imagenes/logo.svg" alt="Logo Tierra Media" class="w-[70px] h-auto">
             </div>
-            <nav class="space-x-6 text-lg font-semibold">
-                <a href="#" class="hover:text-gold-500">Inicio</a>
-                <a href="#" class="hover:text-gold-500">Categorías</a>
-                <a href="#" class="hover:text-gold-500">Quiénes somos</a>
-                <a href="#" class="hover:text-gold-500">Contacto</a>
-            </nav>
+            <!-- Formulario -->
+            <form class="flex flex-col w-full space-y-4 mt-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <input type="text" placeholder="Destino" class="p-2 rounded bg-white text-black w-full" />
+                <input type="text" placeholder="Fecha" class="p-2 rounded bg-white text-black w-full" />
+                <input type="text" placeholder="Número de personas" class="p-2 rounded bg-white text-black w-full" />
+                <button type="submit" class="p-2 bg-yellow-500 text-white rounded w-full sm:w-auto">Comenzar viaje</button>
+            </form>            
         </div>
     </header>
 
-    <!-- Imagen Destacada con Título y Descripción -->
-    <section class="relative">
-        <div class="bg-cover bg-center h-96" style="background-image: url('ruta-imagen-destacada.jpg');"></div>
-        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-            <div class="text-center p-10 rounded-lg">
-                <h2 class="text-5xl font-bold text-gold-500">Explora la Tierra Media</h2>
-                <p class="text-lg text-white mt-4 max-w-2xl">Descubre la historia, los personajes y la magia detrás de la obra de J.R.R. Tolkien. Sumérgete en las historias que dan vida a la Tierra Media.</p>
+    <!-- Navigation -->
+    <nav class="bg-yellow-900 text-white py-4 px-4 w-full">
+        <div class="flex justify-between items-center w-full">
+          <!-- Enlaces de navegación -->
+          <ul class="flex space-x-8">
+            <li><a href="#home" class="hover:text-yellow-300">Inicio</a></li>
+            <li><a href="#destinos" class="hover:text-yellow-300">Quienes somos</a></li>
+            <li><a href="#paquetes" class="hover:text-yellow-300">Contacto</a></li>
+          </ul>
+      
+          <!-- Barra de búsqueda -->
+          <div class="ml-4 w-1/2">
+            <input type="search" placeholder="Buscar..." class="w-full p-2 rounded bg-white text-black">
+          </div>
+        </div>
+      </nav>
+
+    <!-- Landing Section -->
+    <section class="w-full h-[500px] bg-cover bg-center relative" style="background-image: url('/imagenes/ba.jpg');">
+        <div class="flex items-center justify-center w-full h-full">
+            <div class="bg-white p-8 rounded-lg max-w-xl text-center">
+                <h2 class="text-3xl font-semibold text-green-800 mb-4">Descubre el Mundo de la Tierra Media</h2>
+                <p class="text-lg text-gray-700">Prepárate para vivir aventuras inolvidables, explorar paisajes únicos y
+                    sumergirte en la magia de la Tierra Media. ¡Haz realidad tus sueños de viajero!</p>
             </div>
         </div>
     </section>
 
-    <!-- Barra de Búsqueda -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="flex justify-center">
-            <input type="text" placeholder="Buscar en la Tierra Media..." class="w-full md:w-1/2 px-4 py-2 border border-gold-500 rounded-lg bg-gray-800 text-gold-500 placeholder-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-500">
-        </div>
-    </section>
-
-    <!-- Lista de Artículos Recientes -->
-    <section class="container mx-auto px-4 py-8">
-        <h3 class="text-3xl font-bold mb-6 text-gold-500">Últimos Artículos</h3>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <!-- Blog Section -->
+    <section class="bg-gray-100 py-8 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Últimos Artículos -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Aquí irán los posts -->
             
-            <!-- Artículo 1 -->
-            <article class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img src="ruta-imagen-articulo1.jpg" alt="Imagen del artículo" class="w-full h-52 object-cover">
-                <div class="p-5">
-                    <h4 class="text-2xl font-bold text-gold-500">Los Elfos de Lothlórien</h4>
-                    <p class="text-gray-400 text-sm mt-2">Publicado el 10 de Octubre, 2024 por <span class="font-semibold text-gold-500">Galadriel</span></p>
-                    <p class="text-white mt-4">Sumérgete en los secretos de Lothlórien, hogar de los Elfos del bosque y de la mítica Galadriel, la Dama del Bosque...</p>
-                    <a href="#" class="text-gold-500 hover:underline mt-4 inline-block">Leer más</a>
+                <article class="bg-white p-4 rounded-lg shadow-lg flex">
+                    <div class="flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-2">La Comarca: Un viaje a la tierra de la paz</h2>
+                        <p class="text-sm text-gray-700 mb-4">Descubre el hogar de los Hobbits, un lugar donde la naturaleza y la tranquilidad reinan.</p>
+                        <div class="text-gray-500 text-xs">
+                            <p>Publicado el <span class="font-bold">10 de Enero</span> por <span class="font-bold">Frodo Baggins</span></p>
+                        </div>
+                        <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
+                    </div>
+                    <div class="w-32 h-32 overflow-hidden rounded-lg">
+                        <img src="comarca.jpg" alt="Imagen destacada" class="w-full h-full object-cover">
+                    </div>
+                </article>
+                
+                <article class="bg-white p-4 rounded-lg shadow-lg flex">
+                    <div class="flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-2">Rivendel: El refugio élfico</h2>
+                        <p class="text-sm text-gray-700 mb-4">Un lugar lleno de sabiduría y belleza, donde los Elfos protegen sus secretos más antiguos.</p>
+                        <div class="text-gray-500 text-xs">
+                            <p>Publicado el <span class="font-bold">15 de Febrero</span> por <span class="font-bold">Aragorn</span></p>
+                        </div>
+                        <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
+                    </div>
+                    <div class="w-32 h-32 overflow-hidden rounded-lg">
+                        <img src="rivendel.jpg" alt="Imagen destacada" class="w-full h-full object-cover">
+                    </div>
+                </article>
+                
+                <article class="bg-white p-4 rounded-lg shadow-lg flex">
+                    <div class="flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-2">Mordor: El reino oscuro</h2>
+                        <p class="text-sm text-gray-700 mb-4">Adéntrate en las tierras oscuras de Sauron, un lugar donde el mal crece y se esconde en las sombras.</p>
+                        <div class="text-gray-500 text-xs">
+                            <p>Publicado el <span class="font-bold">22 de Marzo</span> por <span class="font-bold">Gollum</span></p>
+                        </div>
+                        <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
+                    </div>
+                    <div class="w-32 h-32 overflow-hidden rounded-lg">
+                        <img src="mordor.jpg" alt="Imagen destacada" class="w-full h-full object-cover">
+                    </div>
+                </article>
+                
+                <article class="bg-white p-4 rounded-lg shadow-lg flex">
+                    <div class="flex-1 pr-4">
+                        <h2 class="text-2xl font-bold mb-2">Gondor: La última línea de defensa</h2>
+                        <p class="text-sm text-gray-700 mb-4">Una antigua ciudad que resiste el paso del tiempo, su historia está marcada por la valentía y la lucha.</p>
+                        <div class="text-gray-500 text-xs">
+                            <p>Publicado el <span class="font-bold">5 de Abril</span> por <span class="font-bold">Gimli</span></p>
+                        </div>
+                        <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
+                    </div>
+                    <div class="w-32 h-32 overflow-hidden rounded-lg">
+                        <img src="gondor.jpg" alt="Imagen destacada" class="w-full h-full object-cover">
+                    </div>
+                </article>
+                                
+
+                <!-- Repetir artículos según sea necesario -->
+            </div>
+
+            <!-- Destacados de la Semana -->
+            <div class="lg:col-span-1 space-y-8">
+                <div class="bg-[#E6C47A] p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Destacado 1</h3>
+                    <p class="text-sm text-gray-700">Breve descripción del artículo destacado...</p>
+                    <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
                 </div>
-            </article>
-
-            <!-- Duplica este bloque de artículo para más artículos -->
-            
+                <div class="bg-[#E6C47A] p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Destacado 2</h3>
+                    <p class="text-sm text-gray-700">Breve descripción del artículo destacado...</p>
+                    <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
+                </div>
+                <div class="bg-[#E6C47A] p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Destacado 3</h3>
+                    <p class="text-sm text-gray-700">Breve descripción del artículo destacado...</p>
+                    <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Sección de Categorías y Etiquetas -->
-    <aside class="container mx-auto px-4 py-8">
-        <h4 class="text-2xl font-bold mb-4 text-gold-500">Categorías</h4>
-        <div class="flex flex-wrap gap-3">
-            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Elfos</a>
-            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Hobbits</a>
-            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Historias</a>
-            <a href="#" class="bg-gold-500 text-gray-900 px-3 py-1 rounded-full text-sm hover:bg-gold-600">Anillos de Poder</a>
-            <!-- Añade más categorías según sea necesario -->
-        </div>
-    </aside>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Categorías y Etiquetas -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Categorías</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-yellow-500">Viajes</a></li>
+                    <li><a href="#" class="hover:text-yellow-500">Aventuras</a></li>
+                    <li><a href="#" class="hover:text-yellow-500">Historia</a></li>
+                </ul>
+            </div>
 
-    <!-- Pie de Página con Información de Contacto y Redes Sociales -->
-    <footer class="bg-green-900 text-white mt-8 py-6">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-center md:text-left">
-                <p class="text-lg font-bold">El Anillo Único - Blog de la Tierra Media</p>
-                <p class="text-sm mt-2">Contacto: <a href="mailto:contacto@elanillounico.com" class="text-gold-500">contacto@elanillounico.com</a></p>
+            <!-- Información de Contacto -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                <p>Email: contacto@tierramedia.com</p>
+                <p>Teléfono: +123 456 789</p>
             </div>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-gold-500">Facebook</a>
-                <a href="#" class="hover:text-gold-500">Twitter</a>
-                <a href="#" class="hover:text-gold-500">Instagram</a>
+
+            <!-- Redes Sociales -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-yellow-500">Facebook</a>
+                    <a href="#" class="hover:text-yellow-500">Instagram</a>
+                    <a href="#" class="hover:text-yellow-500">Twitter</a>
+                </div>
             </div>
-            <p class="text-sm mt-4 md:mt-0">© 2024 El Anillo Único. Todos los derechos reservados.</p>
+
+            <!-- Aviso de Copyright -->
+            <div class="col-span-1 sm:col-span-2 lg:col-span-4 text-center text-sm">
+                <p>&copy; 2024 Tierra Media. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
 </body>
+
 </html>
