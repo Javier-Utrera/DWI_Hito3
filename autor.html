@@ -44,79 +44,137 @@
         </div>
     </nav>
 
-    <section class="bg-gray-100 py-8 px-4 h-[600px]">
-        <div class="grid grid-cols-[20%,50%,30%] gap-1 max-w-7xl mx-auto h-full">
-            <!-- Primera columna (20%) -->
-            <div class="bg-white p-6 rounded-lg shadow-lg grid grid-rows-[40%,60%] gap-2 overflow-auto h-full">
-                <!-- Primera fila (40%) -->
-                <div class="bg-gray-200 p-4 rounded-lg mb-4 overflow-auto h-full">
-                    <h3 class="text-xl font-semibold mb-2">Fila 1 - 40%</h3>
+    <section class="py-8 px-4 h-[600px]">
+        <div class="grid md:grid-cols-[20%,50%,30%] gap-4 max-w-7xl mx-auto h-full">
+    
+            <!-- Primera columna (20%) - Modo escritorio: 2 filas, Modo móvil: 2 columnas -->
+            <div class="bg-white p-6 rounded-lg shadow-lg overflow-auto h-full grid md:grid-rows-[40%,60%] md:grid-cols-1 grid-cols-2 gap-2">
+                <!-- Sub-columna izquierda (para móviles) -->
+                <div class=" shadow-lg p-4 rounded-lg overflow-auto flex flex-col items-center justify-center">
+                    <!-- Imagen redonda de perfil -->
+                    <div class="flex justify-center mb-4">
+                        <img src="imagenes/comentario.jpg" alt="Imagen de perfil de Gandalf" class="w-24 h-24 rounded-full object-cover">
+                    </div>
+                    <!-- Nombre del autor centrado debajo de la imagen -->
+                    <h3 class="text-xl font-semibold text-center">Gandalf el Gris</h3>
+                </div>
+            
+                <!-- Sub-columna derecha (para móviles) -->
+                <div class="shadow-lg p-4 rounded-lg overflow-auto">
+                    <!-- Título -->
+                    <h3 class="text-xl font-semibold mb-4">Sobre Gandalf</h3>
+            
+                    <!-- Enlaces a redes sociales -->
+                    <div class="flex-row space-x-4 mb-4">
+                        <a href="https://www.instagram.com/gandalf" class="text-blue-500 hover:underline">Instagram</a>
+                        <a href="https://twitter.com/gandalf" class="text-blue-500 hover:underline">Twitter</a>
+                        <a href="https://www.facebook.com/gandalf" class="text-blue-500 hover:underline">Facebook</a>
+                        <a href="https://www.youtube.com/channel/gandalf" class="text-blue-500 hover:underline">YouTube</a>
+                    </div>
+            
+                    <!-- Enlace de contacto -->
+                    <p class="text-sm text-gray-700 mb-4">¿Quieres contactar con Gandalf? <a href="mailto:gandalf@medio.tierra" class="text-blue-500 hover:underline">Envíame un correo electrónico</a>.</p>
+            
+                    <!-- Libros publicados -->
+                    <div class="mb-4">
+                        <h4 class="font-semibold">Libros publicados:</h4>
+                        <ul class="list-disc pl-5">
+                            <li>"El Señor de los Anillos: La comunidad del anillo"</li>
+                            <li>"El Hobbit: Una aventura inesperada"</li>
+                            <li>"Los Cuentos Inconclusos de Númenor y la Tierra Media"</li>
+                        </ul>
+                    </div>
+            
+                    <!-- Conferencias y eventos -->
+                    <div class="mb-4">
+                        <h4 class="font-semibold">Apariciones en conferencias:</h4>
+                        <ul class="list-disc pl-5">
+                            <li>Conferencia sobre magia antigua en Rivendel (2022)</li>
+                            <li>Encuentro en la Casa Blanca de los Magos (2023)</li>
+                            <li>Fórum de sabiduría de la Tierra Media (2024)</li>
+                        </ul>
+                    </div>
+            
+                    <!-- Premios y reconocimientos -->
+                    <div class="mb-4">
+                        <h4 class="font-semibold">Premios y Reconocimientos:</h4>
+                        <ul class="list-disc pl-5">
+                            <li>Premio al Mejor Mago del Año por la Hermandad de Magos (2020)</li>
+                            <li>Medalla de Honor de la Comunidad de Elfos (2021)</li>
+                            <li>Reconocimiento como Gran Líder por la Sociedad de los Hombres (2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Segunda columna (50%) - Oculta en dispositivos móviles -->
+            <div class="bg-white p-6 rounded-lg shadow-lg overflow-auto h-full hidden md:block">
+                <h3 class="text-2xl font-bold mb-4">Sobre Gandalf</h3>
+
+                <!-- Sección de antecedentes -->
+                <div class="mb-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Antecedentes del Autor</h4>
                     <p class="text-sm text-gray-700">
-                        Contenido de la primera fila que ocupa el 40% de la altura de la columna.
+                        Nacido en Valinor, Gandalf es uno de los cinco Istari enviados a la Tierra Media para combatir las fuerzas oscuras. A lo largo de los siglos, ha sido testigo de grandes eventos históricos, desde la caída de Númenor hasta la lucha contra Sauron en la Guerra del Anillo. Criado en Rivendel, Gandalf siempre estuvo rodeado de magia, aventuras y leyendas que marcaron su destino.
                     </p>
                 </div>
-                <!-- Segunda fila (60%) -->
-                <div class="bg-gray-300 p-4 rounded-lg overflow-auto h-full">
-                    <h3 class="text-xl font-semibold mb-2">Fila 2 - 60%</h3>
-                    <p class="text-sm text-gray-700">Contenido de la segunda fila que ocupa el 60% restante de la
-                        altura
-                        de la columna.</p>
+
+                <!-- Sección de intereses y pasiones -->
+                <div class="mb-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Intereses y Pasiones</h4>
+                    <p class="text-sm text-gray-700">
+                        A lo largo de sus viajes, Gandalf ha desarrollado una pasión profunda por las antiguas ruinas y leyendas de la Tierra Media. Su curiosidad y deseo de conocimiento lo han llevado a explorar los rincones más remotos de este mundo, buscando entender los misterios de las tierras olvidadas. Sin embargo, su mayor pasión es la sabiduría, la cual ha compartido generosamente con aquellos que se cruzan en su camino.
+                    </p>
+                </div>
+
+                <!-- Sección de toque personal -->
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Un Toque Personal</h4>
+                    <p class="text-sm text-gray-700">
+                        A pesar de su gran poder, Gandalf es conocido por su humildad y su enfoque en la enseñanza. Siempre dispuesto a compartir las historias de sus viajes y las lecciones aprendidas, ha sido mentor y guía para héroes como Frodo Baggins y Aragorn. Su conexión con la gente es una de sus mayores cualidades, siendo no solo un líder en tiempos de guerra, sino también un amigo fiel y protector de la Tierra Media.
+                    </p>
                 </div>
             </div>
-
-            <!-- Segunda columna (50%) -->
-            <div class="bg-white p-6 rounded-lg shadow-lg overflow-auto h-full">
-                <h3 class="text-xl font-semibold mb-4">Columna 2</h3>
-                <p class="text-sm text-gray-700">Contenido para la segunda columna, la más grande.</p>
-            </div>
-
-            <!-- Tercera columna (30%) -->
-            <div class="bg-white p-6 rounded-lg shadow-lg grid grid-rows-3 gap-4 overflow-auto h-full">
-                <!-- Fila 1 - Artículo 1 -->
-                <article class="bg-white p-4 rounded-lg shadow-lg flex">
-                    <div class="flex-1 pr-4 ">
+    
+            <!-- Tercera columna (30%) - Oculta en dispositivos móviles -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col gap-4 overflow-auto h-full hidden md:flex">
+                <!-- Artículo 1 -->
+                <article class="bg-white p-4 rounded-lg shadow-lg flex w-full">
+                    <div class="flex-1 pr-4">
                         <h2 class="text-2xl font-bold mb-2">La Comarca: Un viaje a la tierra de la paz</h2>
-                        <p class="text-sm text-gray-700 mb-4">Descubre el hogar de los Hobbits, un lugar donde la
-                            naturaleza y la tranquilidad reinan.</p>
+                        <p class="text-sm text-gray-700 mb-4">Descubre el hogar de los Hobbits, un lugar donde la naturaleza y la tranquilidad reinan.</p>
                         <div class="text-gray-500 text-xs">
-                            <p>Publicado el <span class="font-bold">10 de Enero</span> por <span class="font-bold">Frodo
-                                    Baggins</span></p>
+                            <p>Publicado el <span class="font-bold">10 de Enero</span> por <span class="font-bold">Frodo Baggins</span></p>
                         </div>
                         <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
                     </div>
                     <div class="w-32 h-32 overflow-hidden rounded-lg">
-                        <img src="/imagenes/blog_comarca.webp" alt="Imagen destacada"
-                            class="w-full h-full object-cover">
+                        <img src="/imagenes/blog_comarca.webp" alt="Imagen destacada" class="w-full h-full object-cover">
                     </div>
                 </article>
-
-                <!-- Fila 2 - Artículo 2 -->
-                <article class="bg-white p-4 rounded-lg shadow-lg flex">
+    
+                <!-- Artículo 2 -->
+                <article class="bg-white p-4 rounded-lg shadow-lg flex w-full">
                     <div class="flex-1 pr-4">
                         <h2 class="text-2xl font-bold mb-2">Rivendel: El refugio élfico</h2>
-                        <p class="text-sm text-gray-700 mb-4">Un lugar lleno de sabiduría y belleza, donde los Elfos
-                            protegen sus secretos más antiguos.</p>
+                        <p class="text-sm text-gray-700 mb-4">Un lugar lleno de sabiduría y belleza, donde los Elfos protegen sus secretos más antiguos.</p>
                         <div class="text-gray-500 text-xs">
-                            <p>Publicado el <span class="font-bold">15 de Febrero</span> por <span
-                                    class="font-bold">Aragorn</span></p>
+                            <p>Publicado el <span class="font-bold">15 de Febrero</span> por <span class="font-bold">Aragorn</span></p>
                         </div>
                         <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
                     </div>
                     <div class="w-32 h-32 overflow-hidden rounded-lg">
-                        <img src="/imagenes/blog_rivendell.webp" alt="Imagen destacada"
-                            class="w-full h-full object-cover">
+                        <img src="/imagenes/blog_rivendell.webp" alt="Imagen destacada" class="w-full h-full object-cover">
                     </div>
                 </article>
-
-                <!-- Fila 3 - Artículo 3 -->
-                <article class="bg-white p-4 rounded-lg shadow-lg flex">
+    
+                <!-- Artículo 3 -->
+                <article class="bg-white p-4 rounded-lg shadow-lg flex w-full">
                     <div class="flex-1 pr-4">
                         <h2 class="text-2xl font-bold mb-2">Mordor: El reino oscuro</h2>
-                        <p class="text-sm text-gray-700 mb-4">Adéntrate en las tierras oscuras de Sauron, un lugar
-                            donde el mal crece y se esconde en las sombras.</p>
+                        <p class="text-sm text-gray-700 mb-4">Adéntrate en las tierras oscuras de Sauron, un lugar donde el mal crece y se esconde en las sombras.</p>
                         <div class="text-gray-500 text-xs">
-                            <p>Publicado el <span class="font-bold">22 de Marzo</span> por <span
-                                    class="font-bold">Gollum</span></p>
+                            <p>Publicado el <span class="font-bold">22 de Marzo</span> por <span class="font-bold">Gollum</span></p>
                         </div>
                         <a href="#" class="text-blue-500 hover:underline">Leer más...</a>
                     </div>
@@ -125,9 +183,9 @@
                     </div>
                 </article>
             </div>
-
         </div>
     </section>
+
     <div class="bg-gray-100 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 py-4">
         <!-- Aquí irán los posts -->
         <article class="bg-white p-4 rounded-lg shadow-lg flex">
